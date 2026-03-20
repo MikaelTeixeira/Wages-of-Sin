@@ -32,6 +32,7 @@ html, body{
 #game-image{
     width: 100%;
     min-height: 80vh;
+    max-height: 600px;
     background-color: rgb(30, 28, 28);
     display: flex;
     align-items: center;
@@ -155,7 +156,7 @@ html, body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: clamp(19rem, 35%, 29rem);
+    width: 35rem;
     min-height: 15vh;
     margin-top: 10vh;
 }
@@ -166,7 +167,6 @@ html, body{
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 1.5rem;
     background-image: url("../IMGS/golden-background.svg");
     background-size: cover;
     background-repeat: no-repeat;
