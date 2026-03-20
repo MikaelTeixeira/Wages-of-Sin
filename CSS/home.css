@@ -7,7 +7,9 @@
     --gold-color: rgb(169, 150, 45);
     --light-gold-color: rgb(253, 226, 76);
     --lighter-gold-color: rgba(253, 226, 76, 0.523);
-    --black-acrilic: rgba(0, 0, 0, 0.83)
+    --black-acrilic: rgba(0,0,0, 0.65);
+    --light-black: rgb(6, 6, 6);
+    --lighter-black: rgb(100, 100, 100);
 }
 
 html, body{
@@ -40,8 +42,8 @@ html, body{
     background-position: center;
 
     box-shadow: 
-    inset 0 80px 80px -40px rgba(0,0,0,0.9),
-    inset 0 -80px 80px -40px rgba(0,0,0,0.9);
+    inset 0 5rem 5rem -0.625rem rgba(0,0,0,1),
+    inset 0 -5rem 5rem -0.625rem rgba(0,0,0,1);
 }
 
 #header{
@@ -50,9 +52,9 @@ html, body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    min-height: 60px;
+    min-height: 3.75rem;
     background-color: var(--black-acrilic);
-    border-bottom: 1px solid rgba(253, 226, 76, 0.261);
+    border-bottom: 0.0625rem solid rgba(253, 226, 76, 0.261);
     padding: 0 2rem;
     box-sizing: border-box;
 }
@@ -61,20 +63,21 @@ html, body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: min(20%, 250px);
-    min-width: 180px;
+    width: min(20%, 15.625rem);
+    min-width: 11.25rem;
     height: 100%;
     justify-content: center;
     gap: 1rem;
 }
 
 #franchise-logo{
-    width: clamp(40px, 4vw, 70px);
+    width: clamp(2.5rem, 4vw, 4.375rem);
     height: auto;
 }
 
 #franchise-name{
-    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-size: clamp(1rem, 1vw, 2rem);
+    font-weight: lighter;
     color: rgb(125, 107, 3);
 }
 
@@ -85,8 +88,8 @@ html, body{
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    width: min(30%, 400px);
-    min-width: 250px;
+    width: min(30%, 25rem);
+    min-width: 15.625rem;
     height: 100%;
     gap: 1.5rem;
 }
@@ -94,7 +97,7 @@ html, body{
 .redirect{
     color: rgb(100, 100, 100);
     font-size: clamp(0.8rem, 1vw, 0.95rem);
-    text-underline-offset: 4px;
+    text-underline-offset: 0.25rem;
     text-decoration: none;
     font-weight: lighter;
 }
@@ -132,7 +135,7 @@ html, body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 #title{
@@ -143,16 +146,8 @@ html, body{
     margin-bottom: 0;
 }
 
-#subtitle{
-    margin-top: 1rem;
-    font-family: "minha fonte";
-    font-size: clamp(1.2rem, 3vw, 4.2rem);
-    font-weight: bold;
-    color: var(--light-gold-color);
-}
-
 #title, #subtitle{
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgb(0, 0, 0);
 }
 
 #options-box{
@@ -160,8 +155,7 @@ html, body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 30%;
-    height: 100%;
+    width: clamp(19rem, 35%, 29rem);
     min-height: 15vh;
     margin-top: 10vh;
 }
@@ -172,15 +166,14 @@ html, body{
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 25px;
+    margin-left: 1.5rem;
     background-image: url("../IMGS/golden-background.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    box-shadow: 0px 0px 25px var(--lighter-gold-color);
+    box-shadow: 0 0 1.5625rem var(--lighter-gold-color);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
-
+    font-size: 1rem;
 }
 
 #trailer-button{
@@ -188,41 +181,146 @@ html, body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-right: 25px;
-    border: 1px solid;
+    border: 0.0625rem solid;
     border-color: var(--light-gold-color);
     background-color: var(--black-acrilic);
     color: var(--light-gold-color);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 #trailer-button:hover, #lore-button:hover{
     transform: scale(1.1);
     transition: 0.4s ease;
     cursor: pointer;
-
 }
 
 #play-image{
-    margin-right: 15px;
-    width: 25px;
-    height: 25px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.625rem;
+    margin-right: 1rem;
 }
+
 .option{
     background-color: var(--black-acrilic);
-    border: 0px solid transparent;
-    width: 25vh;
-    height: 8vh;
+    border: 0 solid transparent;
+    width: clamp(10rem, 15vw, 14rem);
+    height: clamp(3rem, 6vh, 4rem);
 }
 
 #divisor{
     width: 100%;
-    height: 10px;
+    height: 0.625rem;
     background-color: rgb(0, 0, 0);
 }
 
 #games-section{
     width: 100%;
     min-height: 80vh;
+}
+
+#section-interval{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 8rem;
+    background-color: rgb(6, 6, 6);
+}
+
+.line{
+    width: 8rem;
+    height: 0.625rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.left-line{
+    background-image: url("../IMGS/left-line.svg");
+}
+
+.right-line{
+    background-image: url("../IMGS/right-line.svg");
+}
+
+#pillars{
+    color: var(--gold-color);
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    word-spacing: 0.5rem;
+}
+
+#info-section{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-black);
+}
+
+.info-div{
+    display: flex;
+    flex-direction: column;
+    width: clamp(17rem, 21vw, 21rem);
+    min-height: 15rem;
+    background-color: var(--light-black);
+    padding: 1.5rem;
+    border: 0.5px solid rgb(from var(--gold-color) r g b /30%);
+    overflow-wrap: break-word;
+}
+
+.info-div:hover{
+    transform: scale(1.01);
+    transition: 0.4s ease;
+    
+}
+
+#exploration-div{
+    margin-left: 2rem;
+}
+
+#combat-div{
+    margin-right: 2rem;
+}
+
+.top-div{
+    width: 30%;
+    height: 20%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.09375rem solid rgb(from var(--light-gold-color) r g b / 40%);
+    box-shadow: 0 0 0.9375rem var(--lighter-gold-color);
+}
+
+.info-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.info-title{
+    color: var(--gold-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+.info-text{
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
 }
