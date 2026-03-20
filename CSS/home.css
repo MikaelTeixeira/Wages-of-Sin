@@ -1,326 +1,321 @@
-@font-face{
+@font-face {
     font-family: "minha fonte";
     src: url("../FONTS/CinzelDecorative-Regular.otf");
 }
 
-:root{
+:root {
+    --display-font: "minha fonte";
+    --serif-font: "Times New Roman", Times, serif;
     --gold-color: rgb(169, 150, 45);
     --light-gold-color: rgb(253, 226, 76);
     --lighter-gold-color: rgba(253, 226, 76, 0.523);
-    --black-acrilic: rgba(0,0,0, 0.65);
+    --black-acrilic: rgba(0, 0, 0, 0.65);
     --light-black: rgb(6, 6, 6);
     --lighter-black: rgb(100, 100, 100);
+    --body-background: rgb(172, 170, 170);
+    --hero-background: rgb(30, 28, 28);
+    --text-muted: rgb(155, 155, 155);
+    --transition-default: 0.4s ease;
 }
 
-html, body{
-    background-color: rgb(172, 170, 170);
-    padding: 0;
-    margin: 0;
-    min-height: 100%;
-    width: 100%;
-}
-
-#main-section{
-    width: 100%;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "minha fonte";
-}
-
-#game-image{
-    width: 100%;
-    min-height: 80vh;
-    max-height: 600px;
-    background-color: rgb(30, 28, 28);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-image: url("../IMGS/game-image1 1.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    box-shadow: 
-    inset 0 5rem 5rem -0.625rem rgba(0,0,0,1),
-    inset 0 -5rem 5rem -0.625rem rgba(0,0,0,1);
-}
-
-#header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 3.75rem;
-    background-color: var(--black-acrilic);
-    border-bottom: 0.0625rem solid rgba(253, 226, 76, 0.261);
-    padding: 0 2rem;
+* {
     box-sizing: border-box;
 }
 
-#franchise-area{
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background);
+}
+
+#main-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
+    min-height: 80vh;
+    font-family: var(--display-font);
+}
+
+#header,
+#franchise-area,
+#redirect-area,
+#options-box,
+#lore-button,
+#trailer-button,
+.top-div,
+.icon-box {
+    display: flex;
+    align-items: center;
+}
+
+#header,
+#franchise-area,
+#redirect-area,
+#options-box,
+#lore-button,
+#trailer-button {
+    flex-direction: row;
+}
+
+#game-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 80vh;
+    max-height: 600px;
+    background: var(--hero-background) url("../IMGS/game-image1 1.svg") center / cover no-repeat;
+    box-shadow:
+        inset 0 5rem 5rem -0.625rem rgba(0, 0, 0, 1),
+        inset 0 -5rem 5rem -0.625rem rgba(0, 0, 0, 1);
+}
+
+#header {
+    justify-content: space-between;
+    width: 100%;
+    min-height: 3.75rem;
+    padding: 0 2rem;
+    background-color: var(--black-acrilic);
+    border-bottom: 0.0625rem solid rgba(253, 226, 76, 0.261);
+}
+
+#franchise-area {
+    justify-content: center;
+    gap: 1rem;
     width: min(20%, 15.625rem);
     min-width: 11.25rem;
     height: 100%;
-    justify-content: center;
-    gap: 1rem;
 }
 
-#franchise-logo{
+#franchise-logo {
     width: clamp(2.5rem, 4vw, 4.375rem);
     height: auto;
 }
 
-#franchise-name{
+#franchise-name {
+    color: rgb(125, 107, 3);
     font-size: clamp(1rem, 1vw, 2rem);
     font-weight: lighter;
-    color: rgb(125, 107, 3);
 }
 
-#redirect-area{
-    font-family: 'Times New Roman', Times, serif;
-    display: flex;
-    flex-direction: row;
+#redirect-area {
     justify-content: space-between;
-    text-align: center;
-    align-items: center;
+    gap: 1.5rem;
     width: min(30%, 25rem);
     min-width: 15.625rem;
     height: 100%;
-    gap: 1.5rem;
+    font-family: var(--serif-font);
+    text-align: center;
 }
 
-.redirect{
-    color: rgb(100, 100, 100);
+.redirect {
+    color: var(--lighter-black);
     font-size: clamp(0.8rem, 1vw, 0.95rem);
-    text-underline-offset: 0.25rem;
-    text-decoration: none;
     font-weight: lighter;
+    text-decoration: none;
+    text-underline-offset: 0.25rem;
+    transition: color var(--transition-default), transform var(--transition-default);
 }
 
-#homepage{
+#homepage {
     color: var(--gold-color);
 }
 
-.redirect:hover{
+.redirect:hover {
+    color: var(--gold-color);
     transform: scale(1.1);
-    color: var(--gold-color);
-    transition: 0.4s ease;
     cursor: pointer;
 }
 
-#intro-section{
+#intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
 }
 
-#info-section{
-    width: 100%;
-    height: 100%;
-}
-
-#game-title-div{
+#game-title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     min-height: 10rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
     margin-top: 0;
+    text-align: center;
 }
 
-#title{
-    font-family: "minha fonte";
+#title {
+    margin-bottom: 0;
+    color: var(--light-gold-color);
+    font-family: var(--display-font);
     font-size: clamp(2.5rem, 6vw, 6.8rem);
     font-weight: bold;
-    color: var(--light-gold-color);
-    margin-bottom: 0;
-}
-
-#title, #subtitle{
     text-shadow: 0.125rem 0.125rem 0.125rem rgb(0, 0, 0);
 }
 
-#options-box{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+#options-box {
     justify-content: space-between;
     width: 35rem;
     min-height: 15vh;
     margin-top: 10vh;
 }
 
-#lore-button{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    background-image: url("../IMGS/golden-background.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 0 0 1.5625rem var(--lighter-gold-color);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1rem;
-}
-
-#trailer-button{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border: 0.0625rem solid;
-    border-color: var(--light-gold-color);
+.option {
+    width: clamp(10rem, 15vw, 14rem);
+    height: clamp(3rem, 6vh, 4rem);
+    border: 0 solid transparent;
     background-color: var(--black-acrilic);
-    color: var(--light-gold-color);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1rem;
 }
 
-#trailer-button:hover, #lore-button:hover{
+#lore-button,
+#trailer-button {
+    justify-content: center;
+    font-family: var(--serif-font);
+    font-size: 1rem;
+    transition: transform var(--transition-default);
+}
+
+#lore-button {
+    text-align: center;
+    background: url("../IMGS/golden-background.svg") center / cover no-repeat;
+    box-shadow: 0 0 1.5625rem var(--lighter-gold-color);
+}
+
+#trailer-button {
+    color: var(--light-gold-color);
+    background-color: var(--black-acrilic);
+    border: 0.0625rem solid var(--light-gold-color);
+}
+
+#trailer-button:hover,
+#lore-button:hover {
     transform: scale(1.1);
-    transition: 0.4s ease;
     cursor: pointer;
 }
 
-#play-image{
+#play-image {
     width: 1.5rem;
     height: 1.5rem;
     margin-left: 0.625rem;
     margin-right: 1rem;
 }
 
-.option{
-    background-color: var(--black-acrilic);
-    border: 0 solid transparent;
-    width: clamp(10rem, 15vw, 14rem);
-    height: clamp(3rem, 6vh, 4rem);
-}
-
-#divisor{
-    width: 100%;
-    height: 0.625rem;
-    background-color: rgb(0, 0, 0);
-}
-
-#games-section{
-    width: 100%;
-    min-height: 80vh;
-}
-
-#section-interval{
+#section-interval {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 8rem;
-    background-color: rgb(6, 6, 6);
+    background-color: var(--light-black);
 }
 
-.line{
+.line {
     width: 8rem;
     height: 0.625rem;
-    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.left-line{
+.left-line {
     background-image: url("../IMGS/left-line.svg");
 }
 
-.right-line{
+.right-line {
     background-image: url("../IMGS/right-line.svg");
 }
 
-#pillars{
+#pillars {
+    margin: 0 1rem;
     color: var(--gold-color);
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    font-family: var(--serif-font);
     word-spacing: 0.5rem;
 }
 
-#info-section{
-    width: 100%;
-    min-height: 50vh;
+#info-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    min-height: 50vh;
     background-color: var(--light-black);
 }
 
-.info-div{
+.info-div {
     display: flex;
     flex-direction: column;
     width: clamp(17rem, 21vw, 21rem);
     min-height: 15rem;
-    background-color: var(--light-black);
     padding: 1.5rem;
-    border: 0.5px solid rgb(from var(--gold-color) r g b /30%);
+    background-color: var(--light-black);
+    border: 0.5px solid rgb(from var(--gold-color) r g b / 30%);
     overflow-wrap: break-word;
+    transition: transform var(--transition-default);
 }
 
-.info-div:hover{
+.info-div:hover {
     transform: scale(1.01);
-    transition: 0.4s ease;
-    
 }
 
-#exploration-div{
+#exploration-div {
     margin-left: 2rem;
 }
 
-#combat-div{
+#combat-div {
     margin-right: 2rem;
 }
 
-.top-div{
+.top-div {
+    justify-content: center;
     width: 30%;
     height: 20%;
     margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.icon-box{
+.icon-box {
+    justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 0.09375rem solid rgb(from var(--light-gold-color) r g b / 40%);
     box-shadow: 0 0 0.9375rem var(--lighter-gold-color);
 }
 
-.info-icon{
+.info-icon {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.info-title{
+.info-title,
+.info-text {
+    font-family: var(--serif-font);
+}
+
+.info-title {
     color: var(--gold-color);
-    font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
 }
 
-.info-text{
-    color: rgb(155, 155, 155);
-    font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
+.info-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+#divisor {
+    width: 100%;
+    height: 0.625rem;
+    background-color: rgb(0, 0, 0);
+}
+
+#games-section {
+    width: 100%;
+    min-height: 80vh;
 }
