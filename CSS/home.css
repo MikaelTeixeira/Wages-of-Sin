@@ -11,13 +11,18 @@
     --lighter-gold-color: rgba(253, 226, 76, 0.523);
     --black-acrilic: rgba(0, 0, 0, 0.65);
     --light-black: rgb(6, 6, 6);
-    --lighter-black: rgb(100, 100, 100);
+    --lighter-black: rgb(12, 12, 12);
     --body-background: rgb(172, 170, 170);
     --hero-background: rgb(30, 28, 28);
     --text-muted: rgb(155, 155, 155);
     --transition-default: 0.4s ease;
 
-    --dark-red: rgb(127, 0, 0)
+    --dark-red: rgb(127, 0, 0);
+
+
+    --ideal-box-shadow: inset 0 5rem 5rem -0.625rem rgba(0, 0, 0, 1), inset 0 -5rem 5rem -0.625rem rgba(0, 0, 0, 1);
+    --light-box-shadow:inset 0 2rem 2rem -0.4rem rgba(0, 0, 0, 1), inset 0 -2rem 2rem -0.4rem rgba(0, 0, 0, 1);
+    --lighter-box-shadow: inset 0 1rem 1rem -0.4rem rgba(0, 0, 0, 1), inset 0 -1rem 1rem -0.4rem rgba(0, 0, 0, 1);
 }
 
 * {
@@ -72,9 +77,8 @@ body {
     min-height: 80vh;
     max-height: 600px;
     background: var(--hero-background) url("../IMGS/game-image1 1.svg") center / cover no-repeat;
-    box-shadow:
-        inset 0 5rem 5rem -0.625rem rgba(0, 0, 0, 1),
-        inset 0 -5rem 5rem -0.625rem rgba(0, 0, 0, 1);
+    box-shadow: var(--ideal-box-shadow);
+
 }
 
 #header {
@@ -116,7 +120,7 @@ body {
 }
 
 .redirect {
-    color: var(--lighter-black);
+    color: var(--text-muted);
     font-size: clamp(0.8rem, 1vw, 0.95rem);
     font-weight: lighter;
     text-decoration: none;
@@ -254,7 +258,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: clamp(75rem, 80vw, 100%);
+    width: clamp(78rem, 80vw, 100%);
     height: clamp(17rem, 80vh, 100%);
     min-height: 50vh;
     background-color: var(--light-black);
@@ -320,45 +324,16 @@ body {
     font-size: 1rem;
 }
 
-#divisor{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: clamp(2rem, 3vh, 4rem);
-    padding: 0%;
-}
-
-#divisor-img{
-    width: 0.5rem;
-    height: 0.5rem;
-
-
-}
-
-#divisor-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: clamp(0.7rem, 1vw, 1rem);
-    height: clamp(1rem, 2vh, 2rem);
-    background-color: transparent;
-    border: 1px solid rgb(from var(--light-gold-color) r g b/50%);
-    box-shadow: 0 0 0.9rem rgb(from var(--light-gold-color) r g b / 40%);
-
-}
-
 #games-section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: clamp(75rem, 80vw, 100%);
-    height: clamp(25rem, 80vh, 45rem);
-    background-color: green;
+    width: clamp(78rem, 80vw, 100%);
+    min-height: 25rem;
 }
 
 #games-apresentation{
+    margin-top: 5rem;
     font-size: 35px;
     font-weight: bold;
     text-align: center;
@@ -368,48 +343,81 @@ body {
 #games-div{
     display: flex;
     width: 100%;
-    height: clamp(25rem, 75vh, 40rem);
+    min-height: 25rem;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: cyan;
 }
 
 .game-box{
     margin-top: clamp(4rem, 10vh, 10rem);
     display: flex;
     flex-direction: column;
-    width: clamp(18rem, 26vw, 28rem);
-    height: clamp(26rem, 50vh, 40rem);
-    background-color: red;
+    justify-content: flex-start;
+    align-items: center;
+    width: clamp(15rem, 25vw, 30rem);
+    height: clamp(26rem, 60vh, 40rem);
     border: 1px solid;
     overflow-wrap: break-word;
-
+    border: 0.5px solid;
+    background-color: var(--lighter-black);
 }
 
-
-.games-cover{
-    width: 100%;
-    height: 50%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
+.game-box:hover{
+    transform:scale(1.05);
+    transition: ease 0.5s;
 }
+
+.game-box:hover .games-cover{
+    transition: ease 0.5s;
+    box-shadow: var(--lighter-box-shadow);
+}
+
 
 #first-game-box{
     margin-left: 2rem;
+    border-color: rgba(255, 0, 0, 0.25);
+}
+
+#first-game-box:hover{
+    transition: ease 0.7s;
+    border-color: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 0 0.5rem rgba(255, 0, 0, 0.5);
+}
+
+#second-game-box{
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+#second-game-box:hover{
+    transition: ease 0.7s;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
 }
 
 #third-game-box{
     margin-right: 2rem;
+    border-color: rgba(0, 115, 255, 0.25);
 }
 
+#third-game-box:hover{
+    transition: ease 0.7s;
+    border-color: rgba(0, 115, 255, 0.5);
+    box-shadow: 0 0 0.5rem rgba(0, 115, 255, 0.5);
+}
+
+.games-cover{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: var(--light-box-shadow);
+}
 
 
 #first-game-img{
     background-image: url(../IMGS/game-cover1.svg);
-
 }
 
 #second-game-img{
@@ -418,4 +426,102 @@ body {
 
 #third-game-img{
     background-image: url(../IMGS/game-cover3.svg);
+}
+
+.games-info{
+    width: 90%;
+    margin: 0.2rem;
+}
+
+.game-info-title{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.game-text{
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+#lore-page-link{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    color: var(--gold-color);
+    height: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-underline-offset: 0.3rem;
+}
+
+#lore-page-link:hover{
+    transform: scale(1.02);
+    color: var(--light-gold-color);
+    transition: ease 0.5s;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: clamp(8rem, 20vh, 20rem);
+    background-color: var(--black-acrilic);
+    border: 1px solid;
+    border-color: rgba(from var(--gold-color), r g b/50%);
+    margin-top: 3rem;
+}
+
+.footer-areas{
+    width: clamp(15rem, 33vw, 45rem);
+    height: 100%;
+    justify-content: center;
+}
+
+#disclaimer{
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+}
+
+.disclaimer-text{
+    margin: 0%;
+    margin-left: 1rem;
+    color: var(--gold-color);
+    font-family: "minha fonte";
+}
+
+#disclaimer-description{
+    margin-top: 1rem;
+    font-size: 8px;
+}
+#redirect-area2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-left: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+#homepage2{
+    color: var(--gold-color);
+}
+
+.rdt2{
+    font-size: 10px;
+}
+
+#corporation-disclaimer{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 0%;
+}
+
+#corporation-text{
+    margin-right: 1rem;
+    color: var(--gold-color);
+    font-size: 12px;
 }
