@@ -82,6 +82,8 @@ body {
 }
 
 #header {
+    position: fixed;
+    z-index: 100;
     justify-content: space-between;
     width: 100%;
     min-height: 3.75rem;
@@ -130,6 +132,7 @@ body {
 
 #homepage {
     color: var(--gold-color);
+    text-shadow: rgba(from var(--light-gold-color) r g b / 60%) 0rem 0rem 0.15rem;
 }
 
 .redirect:hover {
@@ -493,7 +496,9 @@ footer{
 
 #disclaimer-description{
     margin-top: 1rem;
-    font-size: 8px;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 #redirect-area2{
     display: flex;
@@ -520,4 +525,5 @@ footer{
     margin-right: 1rem;
     color: var(--gold-color);
     font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
 }
