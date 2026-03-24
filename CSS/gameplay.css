@@ -377,7 +377,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: clamp(40rem, 35vh, 45rem);
+    height: clamp(45rem, 50vh, 50rem);
 }
 
 .picture-line{
@@ -478,7 +478,7 @@ header {
 }
 
 .img-title{
-    margin-left: clamp(2rem, 5vw, 3rem);
+    margin-left: clamp(2rem, 6vw, 4rem);
     margin-bottom: clamp(1.5rem, 3vh, 2rem);
     color: var(--gold-color);
     font-family: 'Times New Roman', Times, serif;
@@ -509,7 +509,7 @@ header {
     justify-content: center;
     margin-top: clamp(1rem, 5vh, 5rem);
     width: 100%;
-    height: clamp(28rem, 20vh, 32rem);
+    height: clamp(32rem, 30vh, 50rem);
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-color: rgba( from var(--gold-color) r g b/20% );
