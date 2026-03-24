@@ -186,6 +186,7 @@ body {
     border: 0 solid transparent;
     background-color: var(--black-acrilic);
     margin-bottom: 0%;
+    text-decoration: none;
 }
 
 #lore-button,
@@ -198,6 +199,7 @@ body {
 }
 
 #lore-button {
+    color: black;
     text-align: center;
     background: url("../IMGS/golden-background.svg") center / cover no-repeat;
     box-shadow: 0 0 1.5625rem var(--lighter-gold-color);
