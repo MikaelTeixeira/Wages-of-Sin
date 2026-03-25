@@ -756,12 +756,35 @@ footer{
 
     .picture {
         min-height: 15rem;
+        background-size: cover;
+    }
+
+    #big-picture-place,
+    #bottom-right-picture-place {
+        min-height: 22rem;
+    }
+
+    #smaller-picture-place,
+    #bottom-left-picture-place,
+    #bottom-middle-picture-place {
+        min-height: 18rem;
+    }
+
+    #big-picture,
+    #bottom-right-picture {
+        min-height: 22rem;
+    }
+
+    #smaller-picture,
+    #bottom-left-picture,
+    #bottom-middle-picture {
+        min-height: 18rem;
     }
 
     .img-title {
         opacity: 1;
         transform: translateY(0);
-        margin-left: 1.25rem;
+        margin-left: 2rem;
         margin-bottom: 1.25rem;
     }
 
@@ -859,9 +882,25 @@ footer{
         min-height: 12rem;
     }
 
+    #big-picture-place,
+    #bottom-right-picture-place,
+    #big-picture,
+    #bottom-right-picture {
+        min-height: 18rem;
+    }
+
+    #smaller-picture-place,
+    #bottom-left-picture-place,
+    #bottom-middle-picture-place,
+    #smaller-picture,
+    #bottom-left-picture,
+    #bottom-middle-picture {
+        min-height: 15rem;
+    }
+
     .img-title {
         font-size: 0.8rem;
-        margin-left: 1rem;
+        margin-left: 1.5rem;
         margin-bottom: 1rem;
     }
 
