@@ -622,3 +622,257 @@ footer{
     font-size: 12px;
     font-family: 'Times New Roman', Times, serif;
 }
+
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    #franchise-area,
+    #redirect-area {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #franchise-area {
+        gap: 0.75rem;
+    }
+
+    #franchise-name {
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
+    }
+
+    #redirect-area {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.25rem;
+    }
+
+    .redirect {
+        font-size: 0.85rem;
+    }
+
+    #title-section {
+        height: auto;
+        min-height: 18rem;
+        padding: 6.5rem 1rem 2rem;
+    }
+
+    #subtitle {
+        margin-top: 0;
+    }
+
+    #title {
+        font-size: clamp(2.4rem, 10vw, 4rem);
+        line-height: 1.05;
+    }
+
+    #game-trailer-div {
+        width: calc(100% - 2rem);
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #trailer-play-button {
+        width: clamp(4rem, 15vw, 5rem);
+        height: clamp(4rem, 15vw, 5rem);
+    }
+
+    #mechanics-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    .mechanics-box {
+        width: 100%;
+        max-width: 28rem;
+        min-height: 0;
+        padding: 1.5rem;
+    }
+
+    .numeration {
+        font-size: 2rem;
+    }
+
+    .mechanics-description {
+        font-size: 1rem;
+    }
+
+    #divisor-place {
+        padding: 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .yellow-line {
+        width: clamp(4rem, 18vw, 8rem);
+    }
+
+    #screenshot-gallery {
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    #pictures-section {
+        height: auto;
+        gap: 1rem;
+        padding: 0 1rem 2rem;
+    }
+
+    .picture-line,
+    #two-first-img-place {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    #big-picture-place,
+    #smaller-picture-place,
+    #bottom-left-picture-place,
+    #bottom-middle-picture-place,
+    #bottom-right-picture-place {
+        width: 100%;
+        height: auto;
+    }
+
+    .picture-place {
+        width: 100%;
+    }
+
+    .picture {
+        min-height: 15rem;
+    }
+
+    .img-title {
+        opacity: 1;
+        transform: translateY(0);
+        margin-left: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    #metroidvania-section {
+        height: auto;
+        padding: 3rem 1rem;
+    }
+
+    #metroidvania-title {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        text-align: center;
+    }
+
+    #metroidvania-text-div,
+    #metroidvania-description-div {
+        width: min(100%, 32rem);
+        height: auto;
+    }
+
+    #metroidvania-text,
+    #metroidvania-description {
+        line-height: 1.6;
+    }
+
+    #demo-redirect {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .footer-areas {
+        display: flex;
+        width: 100%;
+        max-width: 22rem;
+        height: auto;
+    }
+
+    #disclaimer,
+    #redirect-area2,
+    #corporation-disclaimer {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .disclaimer-text,
+    #corporation-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #redirect-area2 {
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.85rem 0.75rem;
+    }
+
+    #title-section {
+        min-height: 16rem;
+        padding: 7.5rem 0.75rem 1.75rem;
+    }
+
+    #subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 0.08rem;
+    }
+
+    #title {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    #game-trailer-div {
+        width: calc(100% - 1.5rem);
+    }
+
+    .mechanics-box,
+    .footer-areas {
+        max-width: 100%;
+    }
+
+    .picture {
+        min-height: 12rem;
+    }
+
+    .img-title {
+        font-size: 0.8rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #metroidvania-text {
+        font-size: 0.95rem;
+    }
+
+    #metroidvania-description,
+    .rdt2,
+    #corporation-text,
+    #disclaimer-description {
+        font-size: 0.75rem;
+    }
+}
