@@ -22,7 +22,8 @@
 
     --ideal-box-shadow: inset 0 5rem 5rem -0.625rem rgba(0, 0, 0, 1), inset 0 -5rem 5rem -0.625rem rgba(0, 0, 0, 1);
     --light-box-shadow:inset 0 2rem 2rem -0.4rem rgba(0, 0, 0, 1), inset 0 -2rem 2rem -0.4rem rgba(0, 0, 0, 1);
-    --lighter-box-shadow: inset 0 1rem 1rem -0.4rem rgba(0, 0, 0, 1), inset 0 -1rem 1rem -0.4rem rgba(0, 0, 0, 1);
+    --lighter-box-shadow: inset 0 1rem 1em -0.6rem rgba(0, 0, 0, 1), inset 0 -1rem 1rem -0.6rem rgba(0, 0, 0, 1);
+    --lighter-box-shadow2: inset 0 0rem 0rem -0.4rem rgba(0, 0, 0, 1), inset 0 -0rem 0rem -0.4rem rgba(0, 0, 0, 1);
 }
 
 * {
@@ -366,18 +367,26 @@ body {
     overflow-wrap: break-word;
     border: 0.5px solid;
     background-color: var(--lighter-black);
+    transition: transform 0.5s ease, box-shadow 0.7s ease, border-color 0.7s ease;
 }
 
 .game-box:hover{
     transform:scale(1.05);
-    transition: ease 0.5s;
+}
+
+.games-cover{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: var(--lighter-box-shadow);
+    transition: box-shadow 0.5s ease;
 }
 
 .game-box:hover .games-cover{
-    transition: ease 0.5s;
-    box-shadow: var(--lighter-box-shadow);
+    box-shadow: var(--lighter-box-shadow2);
 }
-
 
 #first-game-box{
     margin-left: 2rem;
@@ -385,7 +394,6 @@ body {
 }
 
 #first-game-box:hover{
-    transition: ease 0.7s;
     border-color: rgba(255, 0, 0, 0.1);
     box-shadow: 0 0 0.5rem rgba(255, 0, 0, 0.5);
 }
@@ -395,7 +403,6 @@ body {
 }
 
 #second-game-box:hover{
-    transition: ease 0.7s;
     border-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
 }
@@ -406,20 +413,9 @@ body {
 }
 
 #third-game-box:hover{
-    transition: ease 0.7s;
     border-color: rgba(0, 115, 255, 0.5);
     box-shadow: 0 0 0.5rem rgba(0, 115, 255, 0.5);
 }
-
-.games-cover{
-    width: 100%;
-    height: 60%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: var(--light-box-shadow);
-}
-
 
 #first-game-img{
     background-image: url(../IMGS/game-cover1.svg);
@@ -458,12 +454,12 @@ body {
     height: 2.5rem;
     font-family: 'Times New Roman', Times, serif;
     text-underline-offset: 0.3rem;
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
 #lore-page-link:hover{
     transform: scale(1.02);
     color: var(--light-gold-color);
-    transition: ease 0.5s;
 }
 
 footer{
@@ -529,3 +525,252 @@ footer{
     font-size: 12px;
     font-family: 'Times New Roman', Times, serif;
 }
+
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #main-section {
+        width: 100%;
+    }
+
+    #game-image {
+        min-height: auto;
+        max-height: none;
+        padding-bottom: 2rem;
+        background-position: 62% center;
+    }
+
+    #header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    #franchise-area,
+    #redirect-area {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #franchise-area {
+        gap: 0.75rem;
+    }
+
+    #franchise-name {
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
+    }
+
+    #redirect-area {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.25rem;
+    }
+
+    .redirect {
+        font-size: 0.85rem;
+    }
+
+    #intro-section {
+        height: auto;
+        margin-top: 8.5rem;
+        padding: 1rem 1rem 2rem;
+    }
+
+    #game-title-div {
+        min-height: auto;
+    }
+
+    #title {
+        font-size: clamp(2.4rem, 12vw, 4.5rem);
+        line-height: 1.05;
+    }
+
+    #options-box {
+        flex-direction: column;
+        align-items: stretch;
+        width: min(100%, 22rem);
+        min-height: auto;
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    .option {
+        width: 100%;
+    }
+
+    #play-image {
+        margin-left: 0;
+    }
+
+    .section-interval {
+        padding: 0 1rem;
+    }
+
+    .line {
+        width: clamp(4rem, 18vw, 8rem);
+    }
+
+    #pillars {
+        text-align: center;
+        font-size: 0.85rem;
+        word-spacing: 0.2rem;
+    }
+
+    #info-section {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.25rem;
+        width: 100%;
+        min-height: auto;
+        padding: 1.5rem 1rem;
+    }
+
+    .info-div {
+        width: 100%;
+        max-width: 26rem;
+        height: auto;
+        min-height: 0;
+    }
+
+    #exploration-div,
+    #combat-div {
+        margin: 0;
+    }
+
+    .top-div {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    #games-section {
+        width: 100%;
+        padding: 0 1rem;
+        min-height: auto;
+    }
+
+    #games-apresentation {
+        margin-top: 3rem;
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    #games-div {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .game-box {
+        width: 100%;
+        max-width: 22rem;
+        height: auto;
+        min-height: 24rem;
+        margin-top: 0;
+    }
+
+    #first-game-box,
+    #third-game-box {
+        margin: 0;
+    }
+
+    .games-cover {
+        min-height: 19rem;
+    }
+
+    .games-info {
+        width: 88%;
+        padding-bottom: 1rem;
+    }
+
+    #lore-page-link {
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .footer-areas {
+        display: flex;
+        width: 100%;
+        max-width: 22rem;
+        height: auto;
+    }
+
+    #disclaimer,
+    #redirect-area2,
+    #corporation-disclaimer {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .disclaimer-text,
+    #corporation-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #redirect-area2 {
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        padding: 0.85rem 0.75rem;
+    }
+
+    #intro-section {
+        margin-top: 9.5rem;
+        padding: 0.75rem 0.75rem 2rem;
+    }
+
+    #title {
+        font-size: clamp(2rem, 13vw, 3rem);
+    }
+
+    #lore-button,
+    #trailer-button {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    #games-apresentation {
+        font-size: 1.6rem;
+    }
+
+    .info-div,
+    .game-box,
+    .footer-areas {
+        max-width: 100%;
+    }
+
+    .games-cover {
+        min-height: 16rem;
+    }
+
+    #pillars,
+    .game-text,
+    #disclaimer-description,
+    .rdt2,
+    #corporation-text {
+        font-size: 0.75rem;
+    }
+}
+
+
+

@@ -13,6 +13,8 @@
     --light-black: rgb(6, 6, 6);
     --text-muted: rgb(155, 155, 155);
     --transition-default: 0.4s ease;
+    --header-height: 3.75rem;
+    --footer-height: clamp(8rem, 20vh, 20rem);
 }
 
 * {
@@ -26,11 +28,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--light-black);
+    overflow-x: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 #main-section {
@@ -39,6 +43,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 100vw;
     font-family: var(--display-font);
 }
 
@@ -63,6 +68,7 @@ body {
     z-index: 100;
     justify-content: space-between;
     width: 100%;
+    max-width: 100vw;
     min-height: 3.75rem;
     padding: 0 2rem;
     background-color: var(--black-acrilic);
@@ -70,6 +76,7 @@ body {
 }
 
 #franchise-area {
+    flex: 0 1 20rem;
     justify-content: center;
     gap: 1rem;
     width: min(20%, 20rem);
@@ -89,6 +96,7 @@ body {
 }
 
 #redirect-area {
+    flex: 0 1 25rem;
     justify-content: space-between;
     gap: 1.5rem;
     width: min(30%, 25rem);
@@ -96,6 +104,12 @@ body {
     height: 100%;
     font-family: var(--serif-font);
     text-align: center;
+}
+
+#lore,
+#demo {
+    color: var(--gold-color);
+    text-shadow: rgba(from var(--light-gold-color) r g b / 60%) 0 0 0.15rem;
 }
 
 .redirect {
@@ -118,7 +132,8 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
+    max-width: 100vw;
+    min-height: calc(100vh - var(--footer-height));
     padding: 7rem 2rem 4rem;
     background:
         linear-gradient(rgba(6, 6, 6, 0.45), rgba(6, 6, 6, 0.82)),
@@ -181,7 +196,9 @@ body {
 footer {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
     width: 100%;
+    max-width: 100vw;
     height: clamp(8rem, 20vh, 20rem);
     background-color: var(--black-acrilic);
     border: 1px solid rgba(169, 150, 45, 0.5);
@@ -189,7 +206,9 @@ footer {
 
 .footer-areas {
     display: flex;
-    width: clamp(15rem, 33vw, 45rem);
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
     height: 100%;
     justify-content: center;
 }
@@ -233,4 +252,152 @@ footer {
     color: var(--gold-color);
     font-size: 0.75rem;
     font-family: var(--serif-font);
+}
+
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    #franchise-area,
+    #redirect-area {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #franchise-area {
+        gap: 0.75rem;
+    }
+
+    #franchise-name {
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
+    }
+
+    #redirect-area,
+    #redirect-area2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.25rem;
+    }
+
+    .redirect {
+        font-size: 0.85rem;
+    }
+
+    #hero-section {
+        min-height: calc(100svh - 15rem);
+        padding: 8.5rem 1rem 3rem;
+        background-position: 62% center;
+    }
+
+    #hero-overlay {
+        width: 100%;
+        max-width: 32rem;
+        padding: 2.25rem 1.25rem;
+    }
+
+    #eyebrow {
+        font-size: 0.78rem;
+        letter-spacing: 0.18rem;
+        text-align: center;
+    }
+
+    #title {
+        font-size: clamp(2.4rem, 11vw, 4.25rem);
+        line-height: 1.05;
+    }
+
+    #description {
+        margin-top: 1.25rem;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    #return-link {
+        width: min(100%, 20rem);
+        text-align: center;
+        padding: 0.95rem 1.25rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .footer-areas {
+        width: 100%;
+        max-width: 22rem;
+        height: auto;
+    }
+
+    #disclaimer,
+    #redirect-area2,
+    #corporation-disclaimer {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .disclaimer-text,
+    #corporation-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #redirect-area2 {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        padding: 0.85rem 0.75rem;
+    }
+
+    #hero-section {
+        padding: 9.25rem 0.75rem 2.5rem;
+    }
+
+    #hero-overlay {
+        padding: 2rem 1rem;
+    }
+
+    #eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.12rem;
+    }
+
+    #title {
+        font-size: clamp(2rem, 13vw, 3rem);
+    }
+
+    #description {
+        font-size: 0.95rem;
+    }
+
+    #return-link {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .footer-areas {
+        max-width: 100%;
+    }
+
+    #disclaimer-description,
+    .rdt2,
+    #corporation-text {
+        font-size: 0.75rem;
+    }
 }
