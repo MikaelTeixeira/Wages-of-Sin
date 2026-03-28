@@ -3,6 +3,7 @@
     src: url("../FONTS/CinzelDecorative-Regular.otf");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap');
 :root {
     --display-font: "minha fonte";
     --serif-font: "Times New Roman", Times, serif;
@@ -15,8 +16,19 @@
     --body-background: rgb(172, 170, 170);
     --text-muted: rgb(155, 155, 155);
     --transition-default: 0.4s ease;
-    --dark-red: rgb(33, 0, 0);
+    --dark-red: rgba(66, 1, 1, 0.402);
+    --dark-yellow: rgb(229, 255, 0);
     --light-box-shadow: inset 0 2rem 2rem -0.4rem rgba(0, 0, 0, 1), inset 0 -2rem 2rem -0.4rem rgba(0, 0, 0, 1);
+    --yellow-background: rgba(255, 251, 0, 0.215);
+    --realm-red-glow: rgb(253, 6, 6, 0.3);
+    --realm-red-image-glow: rgb(234, 0, 0, 0.3);
+    --realm-red-soft: rgba(255, 0, 0, 0.267);
+    --realm-red-soft-glow: rgba(255, 0, 0, 0.2);
+    --realm-red-text: rgb(111, 3, 3);
+
+    --penant-blue: rgb(128, 212, 212);
+
+    --golden-glow: rgb(253, 226, 76);
 }
 
 * {
@@ -118,7 +130,7 @@ header {
     width: 100%;
     height: clamp(16rem, 40vh, 30rem);
     text-align: center;
-    background-color: rgb(from var(--dark-red) r g b / 20%);
+    background-color: rgba(from var(--dark-red) r g b /10%);
     box-shadow: var(--light-box-shadow);
     border-bottom: 0.0625rem solid rgba(253, 226, 76, 0.261);
 }
@@ -142,6 +154,292 @@ header {
     letter-spacing: 0.125rem;
     text-shadow: rgba(from var(--light-gold-color) r g b / 60%) 0 0 0.35rem;
 }
+
+#info-section{
+    display: flex;
+    width: 100%;
+    min-height: clamp(150rem, 80vh, 180rem);
+    flex-direction: column;
+    align-items: center;
+}
+
+.realm-section{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1rem;
+    width: clamp(30rem, 95vw, 110rem);
+    min-height: clamp(20rem, 80vh, 60rem);
+}
+
+#second-realm-section{
+    flex-direction: row-reverse;
+}
+
+#second-realm-section .realm-info-place{
+    padding-left: 0;
+    padding-right: clamp(3rem, 6vw, 5rem);
+}
+
+#second-realm-section .realm-img{
+    box-shadow: 0rem 0rem 2rem rgba(from var(--penant-blue) r g b / 0.3);
+}
+
+#third-realm-section .realm-img{
+    box-shadow: 0rem 0rem 2rem rgba(from var(--golden-glow) r g b / 0.3);
+}
+
+.realm-img-place{
+    width: clamp(30rem, 50vw, 55rem);
+    height: clamp(20rem, 60vh, 50rem);
+    background-color: green;
+}
+
+.realm-img{
+    padding: 1rem;
+    display: flex;
+    text-align: start;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0rem 0rem 2rem var(--realm-red-image-glow);
+}
+
+#hell-img,
+#second-img,
+#third-img{
+    background-image: url("../IMGS/hell-img.svg");
+}
+
+.realm-img-name{
+    color: var(--gold-color);
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
+
+.realm-info-place{
+    padding-left: clamp(2rem, 25vw, 4rem);
+    width: clamp(50rem, 65vw, 60rem);
+    min-height: clamp(20rem, 60vh, 50rem);
+}
+
+.realm-number{
+    display: flex;
+    margin: 0 0 1rem 0;
+    text-align: start;
+    justify-content: start;
+    font-size: clamp(1rem, 5vw, 14rem);
+    font-family: var(--serif-font);
+    width: clamp(1rem, 2vw, 5rem);
+    height: clamp(1rem, 10vh, 20rem);
+    opacity: 100%;
+}
+
+#hell-number{
+    text-shadow: 0rem 0rem 1.5rem rgba( from var(--realm-red-soft-glow) r g b /75%);
+    color: var(--realm-red-glow);
+}
+
+#second-number{
+    color: rgba( from var(--penant-blue) r g b / 75%);
+    text-shadow: 0rem 0rem 1.5rem var(--penant-blue);
+}
+
+#third-number{
+    color: rgba( from var(--golden-glow) r g b / 50%);
+    text-shadow: 0rem 0rem 1.5rem var(--golden-glow);
+}
+
+
+.realm-title-place{
+    width: 100%;
+    margin-bottom: 0%;
+    min-height: clamp(2rem, 8vh, 7rem);
+}
+
+.realm-place-name{
+    margin-bottom: 1.35rem;
+    font-family: var(--serif-font);
+    word-spacing: clamp(0.25rem, 0.25vw, 2rem);
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    letter-spacing: 1.5PX;
+    
+}
+
+#hell-name-place{
+    text-shadow: 0rem 0rem 0.6rem var(--realm-red-soft-glow);
+    color: var(--realm-red-soft);
+}
+
+#second-name-place{
+    text-shadow: 0rem 0rem 0.6rem rgba(from var(--penant-blue) r g b / 0.2);
+    color: rgba(from var(--penant-blue) r g b / 0.267);
+}
+
+#third-name-place{
+    text-shadow: 0rem 0rem 0.6rem rgba(from var(--golden-glow) r g b / 0.2);
+    color: rgba(from var(--golden-glow) r g b / 0.267);
+}
+
+.realm-name{
+    font-size: clamp(1rem, 4vw, 3rem);
+    font-family: var(--serif-font);
+    letter-spacing: 1.5px;
+    margin: 0%;
+    color: rgba(255, 255, 255, 0.683);
+    text-shadow: 0rem 0rem 0.6rem rgba(241, 253, 6, 0.5);
+}
+
+
+.realm-description{
+    margin-top: 0%;
+    width: 100%;
+}
+
+.main-description{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.774);
+}
+
+.main-description, .second-description{
+    word-spacing: 2px;
+    font-family: "Cinzel", serif;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    font-weight: lighter;
+    text-shadow: 0rem 0rem 0.6rem rgba(241, 253, 6, 0.5);
+}
+
+.second-description{
+    color: rgba(255, 255, 255, 0.614);
+    font-size: 16px;
+}
+
+.realm-message{
+    margin-top: 3rem;
+    font-weight: bolder;
+    font-family: "Cinzel", serif;
+    font-weight: lighter;
+    font-size: clamp(0.5rem, 0.9vw, 2rem);
+    text-align: center;
+    color: var(--realm-red-text);
+}
+
+#second-realm-section .realm-message{
+    color: rgba(from var(--penant-blue) r g b / 0.75);
+}
+
+#third-realm-section .realm-message{
+    color: rgba(from var(--golden-glow) r g b / 0.75);
+}
+
+.realm-list{
+    font-weight: lighter;
+    text-shadow: 0rem 0rem 0.6rem rgba(241, 253, 6, 0.5);
+    font-family: var(--serif-font);
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.614);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right-side, .left-side{
+    width: clamp(4rem, 50vh, 40rem);
+}
+
+.item{
+    margin-top: clamp(0.5rem, 2.5vh, 1rem);
+}
+
+
+.divisor-place{
+    margin-top: clamp(7rem, 10vh, 9rem);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: clamp(2rem, 2vh, 4rem);
+}
+
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#blue-left-line{
+    background-image: url("../IMGS/blue-left-line.svg");
+}
+
+#blue-right-line{
+    background-image: url("../IMGS/blue-right-line.svg");
+}
+
+#second-left-line{
+    background-image: url("../IMGS/left-line.svg");
+}
+
+#second-right-line{
+    background-image: url("../IMGS/right-line.svg");
+}
+
+.divisor-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: clamp(3rem, 5vw, 10rem);
+    height: clamp(2rem, 5vh, 4rem);
+    background-color: var(--black-acrilic);
+    border: 1px solid var(--realm-red-soft);
+}
+
+#blue-divisor-box,
+#second-divisor-box{
+    border-color: rgba(from var(--golden-glow) r g b / 75%);
+    box-shadow: 0rem 0rem 0.8rem rgba(from var(--golden-glow) r g b / 75%);
+}
+
+#blue-divisor-box{
+    border-color: rgba( from var(--penant-blue) r g b / 50%);
+    box-shadow: 0rem 0rem 0.8rem var(--penant-blue);
+}
+
+#third-divisor-box{
+    border-color: rgba(from var(--golden-glow) r g b / 75%);
+    box-shadow: 0rem 0rem 0.8rem rgba(from var(--golden-glow) r g b / 75%);
+}
+
+#second-divisor, #first-divisor{
+    margin-bottom: clamp(3rem,15vh, 15rem);
+}
+
+.star{
+    object-fit: contain;
+    object-position: center;
+    width: 50%;
+    height: 50%;
+}
+
+#third-star{
+    opacity: 0.75;
+    filter: drop-shadow(0rem 0rem 0.4rem rgba(from var(--golden-glow) r g b / 75%));
+}
+
 
 footer {
     display: flex;
