@@ -109,7 +109,7 @@ body {
 #lore,
 #demo {
     color: var(--gold-color);
-    text-shadow: rgba(from var(--light-gold-color) r g b / 60%) 0 0 0.15rem;
+    text-shadow: none;
 }
 
 .redirect {
