@@ -199,7 +199,6 @@ header {
 .realm-img-place{
     width: clamp(24rem, 40vw, 44rem);
     height: clamp(16rem, 48vh, 40rem);
-    background-color: green;
 }
 
 .realm-img{
@@ -866,6 +865,110 @@ footer {
 
     .footer-areas {
         max-width: 100%;
+    }
+}
+
+@media (max-height: 540px) and (orientation: landscape) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0.75rem 1rem;
+    }
+
+    #franchise-area,
+    #redirect-area {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #redirect-area {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem 1rem;
+    }
+
+    #title-section {
+        height: auto;
+        min-height: 11rem;
+        padding: 6rem 1rem 1.5rem;
+    }
+
+    #info-section {
+        width: 100%;
+        min-height: auto;
+        padding: 0 1rem 2rem;
+    }
+
+    .realm-section,
+    #second-realm-section {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .realm-img-place,
+    .realm-info-place {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+
+    .realm-img-place {
+        max-width: 30rem;
+    }
+
+    #publish-section {
+        width: 100%;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    #buttons-place {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .button {
+        width: min(100%, 22rem);
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .footer-areas {
+        width: 100%;
+        max-width: 24rem;
+        height: auto;
+    }
+
+    #redirect-area2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1rem;
+        padding: 0;
+    }
+
+    #disclaimer,
+    #redirect-area2,
+    #corporation-disclaimer {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 }
 

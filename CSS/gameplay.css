@@ -915,3 +915,98 @@ footer{
         font-size: 1rem;
     }
 }
+
+@media (max-height: 540px) and (orientation: landscape) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0.75rem 1rem;
+    }
+
+    #franchise-area,
+    #redirect-area {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #redirect-area {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem 1rem;
+    }
+
+    #title-section {
+        height: auto;
+        min-height: 12rem;
+        padding: 6rem 1rem 1.5rem;
+    }
+
+    #game-trailer-div {
+        width: min(100%, 42rem);
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #mechanics-section,
+    .picture-line,
+    #two-first-img-place {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        height: auto;
+    }
+
+    .mechanics-box,
+    #big-picture-place,
+    #smaller-picture-place,
+    #bottom-left-picture-place,
+    #bottom-middle-picture-place,
+    #bottom-right-picture-place {
+        width: 100%;
+        max-width: 30rem;
+        height: auto;
+    }
+
+    #pictures-section,
+    #metroidvania-section {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .footer-areas {
+        width: 100%;
+        max-width: 24rem;
+        height: auto;
+    }
+
+    #redirect-area2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1rem;
+        padding: 0;
+    }
+
+    #disclaimer,
+    #redirect-area2,
+    #corporation-disclaimer {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
